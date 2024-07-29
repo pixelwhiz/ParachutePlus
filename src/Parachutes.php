@@ -39,6 +39,7 @@ class Parachutes {
         $player->getNetworkProperties()->setGenericFlag(EntityMetadataFlags::SADDLED, true);
         $player->getNetworkProperties()->setGenericFlag(EntityMetadataFlags::WASD_CONTROLLED, true);
         NetworkBroadcastUtils::broadcastPackets($player->getWorld()->getPlayers(), [$link]);
+        return true;
     }
 
     public static function despawnParachute(Player $player) {
