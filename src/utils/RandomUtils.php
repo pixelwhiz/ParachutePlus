@@ -3,7 +3,7 @@
 namespace pixelwhiz\parachute\utils;
 
 
-use pixelwhiz\counterstrike2\math\Vector3;
+use pocketmine\math\Vector3;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\DoubleTag;
 use pocketmine\nbt\tag\FloatTag;
