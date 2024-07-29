@@ -3,10 +3,9 @@
 namespace pixelwhiz\parachute\entity;
 
 
-use pixelwhiz\counterstrike2\math\Vector3;
+use pocketmine\math\Vector3;
 use pixelwhiz\parachute\Parachutes;
 use pocketmine\block\Air;
-use pocketmine\block\Block;
 use pocketmine\entity\EntitySizeInfo;
 use pocketmine\entity\Living;
 use pocketmine\network\mcpe\protocol\types\entity\EntityIds;
