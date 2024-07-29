@@ -1,0 +1,11 @@
+---
+name: ParachutePlus
+version: 1.1.0
+main: pixelwhiz\parachute\Main
+api: 5.0.0
+src-namespace-prefix: pixelwhiz\parachute
+permissions:
+  parachutes.cmd:
+    description: 'Allows players to use this command'
+    default: op
+...
