@@ -1,6 +1,6 @@
 # ParachutePlus
 
-![icons](https://github.com/pixelwhiz/ParachutePlus/blob/master/ParachutePlus.png?raw=true)
+![icons](https://cdn-icons-png.flaticon.com/128/3163/3163735.png)
 
 **ParachutePlus** Yes as the name suggests if you are interested and looking for a parachute plugin for your minecraft server?? You can [download](https://poggit.pmmp.io/ci/pixelwhiz/ParachutePlus/~) and use this plugin xd
 
