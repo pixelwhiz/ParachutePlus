@@ -19,19 +19,36 @@ class Parachute extends Egg {
         $this->setCustomName("Parachute");
     }
 
+    /**
+     * @return Item
+     */
+
     public static function getItem(): Item {
         $item = VanillaItems::EGG();
         $item->setCustomName("Parachute");
         return $item;
     }
 
+    /**
+     * @param Player $player
+     * @return void
+     */
+
     public static function addItem(Player $player): void {
         $player->getInventory()->addItem(self::getItem());
     }
 
+    /**
+     * @return string
+     */
+
     public static function getItemName(): string {
         return "Parachute";
     }
+
+    /**
+     * @return int
+     */
 
     public static function getItemId(): int {
         return ItemTypeIds::EGG;

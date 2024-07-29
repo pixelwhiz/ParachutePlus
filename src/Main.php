@@ -35,6 +35,10 @@ class Main extends PluginBase {
         Server::getInstance()->getCommandMap()->register("parachute", new ParachutesCommands());
     }
 
+    /**
+     * @return Main
+     */
+
     public static function getInstance(): Main {
         return self::$instance;
     }

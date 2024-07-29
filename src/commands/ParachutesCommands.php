@@ -17,6 +17,13 @@ class ParachutesCommands extends Command {
         $this->setPermission("parachutes.cmd");
     }
 
+    /**
+     * @param CommandSender $sender
+     * @param string $commandLabel
+     * @param array $args
+     * @return bool
+     */
+
     public function execute(CommandSender $sender, string $commandLabel, array $args)
     {
         if (!$sender->hasPermission("parachutes.cmd")) {
