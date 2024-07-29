@@ -39,6 +39,7 @@ class EventListener implements Listener {
         }
 
         $event->cancel();
+        return true;
     }
 
     public function onDamage(EntityDamageEvent $event) {

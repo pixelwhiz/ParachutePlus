@@ -39,5 +39,6 @@ class ParachutesCommands extends Command {
 
         $player->getInventory()->addItem(new Parachute());
         $sender->sendMessage(TextFormat::GREEN . "Gave Parachute(s) to {$player->getName()}");
+        return true;
     }
 }

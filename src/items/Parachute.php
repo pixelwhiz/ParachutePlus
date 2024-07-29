@@ -5,8 +5,11 @@ namespace pixelwhiz\parachute\items;
 
 
 use pocketmine\item\Egg;
+use pocketmine\item\Item;
 use pocketmine\item\ItemIdentifier;
 use pocketmine\item\ItemTypeIds;
+use pocketmine\item\VanillaItems;
+use pocketmine\player\Player;
 
 class Parachute extends Egg {
 
