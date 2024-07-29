@@ -19,6 +19,11 @@ use pocketmine\Server;
 
 class Parachutes {
 
+    /**
+     * @param Player $player
+     * @return bool
+     */
+
     public static function spawnParachute(Player $player) {
         $hand = $player->getInventory()->getItemInHand();
         if ($hand->getTypeId() !== Parachute::getItemId() && $hand->getCustomName() !== Parachute::getItemName()) return false;
@@ -42,6 +47,11 @@ class Parachutes {
         return true;
     }
 
+    /**
+     * @param Player $player
+     * @return void
+     */
+
     public static function despawnParachute(Player $player) {
         $hand = $player->getInventory()->getItemInHand();
         if ($hand->getTypeId() === AutoParachute::getTypeId() && $hand->getCustomName() === AutoParachute::getName()) {
@@ -55,6 +65,10 @@ class Parachutes {
         Main::getInstance()->getScheduler()->scheduleDelayedTask(new CancelClimbWalls($player), 20);
     }
 
+    /**
+     * @return void
+     */
+
     public static function clearEntity() : void {
         foreach (Server::getInstance()->getWorldManager()->getWorlds() as $world) {
             foreach ($world->getEntities() as $entity) {
@@ -65,6 +79,11 @@ class Parachutes {
         }
         Main::getInstance()->getLogger()->notice("All chicken entities on server optimized successfully! Have a nice Play :)");
     }
+
+    /**
+     * @param Player $player
+     * @return bool
+     */
 
     public static function isParachuteMode(Player $player): bool {
         $entity = $player->getTargetEntity();
@@ -77,6 +96,10 @@ class Parachutes {
 class CancelClimbWalls extends Task {
 
     private Player $player;
+
+    /**
+     * @param Player $player
+     */
 
     public function __construct(Player $player) {
         $this->player = $player;

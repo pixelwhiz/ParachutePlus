@@ -13,17 +13,29 @@ use pocketmine\player\Player;
 
 class Chicken extends Living {
 
+    /**
+     * @return string
+     */
 
     public function getName(): string
     {
         return "Chicken";
     }
 
+    /**
+     * @return float
+     */
+
     protected function getInitialGravity(): float
     {
         return 0.005;
     }
-    
+
+    /**
+     * @param int $tickDiff
+     * @return bool
+     */
+
     public function entityBaseTick(int $tickDiff = 1): bool
     {
         $player = $this->getTargetEntity();
@@ -41,10 +53,18 @@ class Chicken extends Living {
         return true;
     }
 
+    /**
+     * @return EntitySizeInfo
+     */
+
     protected function getInitialSizeInfo(): EntitySizeInfo
     {
         return new EntitySizeInfo(0.4, 0.4);
     }
+
+    /**
+     * @return string
+     */
 
     public static function getNetworkTypeId(): string
     {
