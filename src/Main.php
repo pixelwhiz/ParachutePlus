@@ -45,7 +45,11 @@ class Main extends PluginBase {
     
     protected function onDisable(): void
     {
-        parent::onDisable();
+        foreach (Server::getInstance()->getOnlinePlayers() as $players) {
+            if (Parachutes::isParachuteMode($players)) {
+                Parachutes::despawnParachute($players);
+            }
+        }
     }
 
 }
