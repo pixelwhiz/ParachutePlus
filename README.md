@@ -15,7 +15,7 @@
 ## Command & Permission
 | Command       | Permission       | Description                          | Usage                           | Default |
 |---------------|------------------|--------------------------------------|---------------------------------|---------|
-| /parachute    | parachutes.cmd   | Allows players to use this command   | /parachute give [player name]   | OP      |
+| /parachute give   | parachutes.cmd   | Allows players to use this command   | /parachute give [player name]   | OP      |
 
 ## Preview
 
