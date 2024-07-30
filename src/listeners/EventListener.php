@@ -21,7 +21,7 @@ class EventListener implements Listener {
 
     public function onUse(PlayerItemUseEvent $event) {
         $player = $event->getPlayer();
-        $item = $player->getInventory()->getItemInHand();
+        $item = $event->getItem();
         if ($item->getTypeId() === Parachute::getItemId() && $item->getCustomName() === Parachute::getItemName()) {
             if (isset(self::$cooldowns[$player->getName()]) && time() < self::$cooldowns[$player->getName()]) {
                 $remainingTime = self::$cooldowns[$player->getName()] - time();
@@ -31,6 +31,7 @@ class EventListener implements Listener {
             }
 
             Parachutes::spawnParachute($player);
+            $event->cancel();
             self::$cooldowns[$player->getName()] = time() + 5;
         }
 
@@ -38,7 +39,6 @@ class EventListener implements Listener {
             Parachutes::despawnParachute($player);
         }
 
-        $event->cancel();
         return true;
     }
 
