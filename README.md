@@ -1,3 +1,9 @@
+[![Contributors](https://img.shields.io/github/contributors/pixelwhiz/ParachutePlus)](https://github.com/pixelwhiz/ParachutePlus/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/pixelwhiz/ParachutePlus)](https://github.com/pixelwhiz/ParachutePlus/network/members)
+[![Stargazers](https://img.shields.io/github/stars/pixelwhiz/ParachutePlus)](https://github.com/pixelwhiz/ParachutePlus/stargazers)
+[![Issues](https://img.shields.io/github/issues/pixelwhiz/ParachutePlus)](https://github.com/pixelwhiz/ParachutePlus/issues)
+[![License](https://img.shields.io/github/license/pixelwhiz/ParachutePlus)](https://github.com/pixelwhiz/ParachutePlus/blob/main/LICENSE)
+
 # ParachutePlus
 
 ![icons](https://cdn-icons-png.flaticon.com/128/3163/3163735.png)
