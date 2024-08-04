@@ -13,7 +13,7 @@ class ParachutesCommands extends Command {
 
     public function __construct()
     {
-        parent::__construct("parachute", "Parachutes main commands", "/parachute give <player name>", ["pc"]);
+        parent::__construct("parachute", "Give parachutes to players", "/parachute give <player name>", ["pc"]);
         $this->setPermission("parachutes.cmd");
     }
 
@@ -31,7 +31,7 @@ class ParachutesCommands extends Command {
             return false;
         }
 
-        if (count($args) < 1) {
+        if (count($args) <= 1) {
             $sender->sendMessage(TextFormat::GRAY . "Usage: ". TextFormat::RED . $this->getUsage());
             return false;
         }
