@@ -7,6 +7,9 @@
 [![Issues](https://img.shields.io/github/issues/pixelwhiz/ParachutePlus)](https://github.com/pixelwhiz/ParachutePlus/issues)
 [![License](https://img.shields.io/github/license/pixelwhiz/ParachutePlus)](https://github.com/pixelwhiz/ParachutePlus/blob/main/LICENSE)
 [![](https://poggit.pmmp.io/shield.state/ParachutePlus)](https://poggit.pmmp.io/p/ParachutePlus)
+[![](https://poggit.pmmp.io/shield.api/ParachutePlus)](https://poggit.pmmp.io/p/ParachutePlus)
+
+<a href="https://poggit.pmmp.io/p/ParachutePlus"><img src="https://poggit.pmmp.io/shield.api/ParachutePlus"></a>
 
 
 ![icons](https://cdn-icons-png.flaticon.com/128/3163/3163735.png)
