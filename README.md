@@ -25,9 +25,9 @@
  - Enjoy
 
 # Command & Permission
-| Command       | Permission       | Description                          | Usage                           | Default |
-|---------------|------------------|--------------------------------------|---------------------------------|---------|
-| /parachute give   | parachutes.cmd   | Allows players to use this command   | /parachute give [player name]   | OP      |
+| Command             | Permission        | Description                          | Usage                             | Aliases             | Default |
+|---------------------|-------------------|--------------------------------------|-----------------------------------|---------------------|---------|
+| /parachuteplus give | parachuteplus.cmd | Allows players to use this command   | /parachuteplus give [player name] | ["parachute", "pc"] | OP      |
 
 # Preview
 
