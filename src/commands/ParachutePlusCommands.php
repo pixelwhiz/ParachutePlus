@@ -1,20 +1,26 @@
 <?php
 
-namespace pixelwhiz\parachute\commands;
+namespace pixelwhiz\parachuteplus\commands;
 
-use pixelwhiz\parachute\items\Parachute;
+use pixelwhiz\parachuteplus\items\Parachute;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
+use pocketmine\plugin\Plugin;
+use pocketmine\plugin\PluginOwned;
+use pocketmine\plugin\PluginOwnedTrait;
 
-class ParachutesCommands extends Command {
+class ParachutePlusCommands extends Command implements PluginOwned {
 
-    public function __construct()
+    use PluginOwnedTrait;
+
+    public function __construct(Plugin $plugin)
     {
-        parent::__construct("parachuteplus", "Give parachutes to players", "/parachute give <player name>", ["parachute", "pc"]);
-        $this->setPermission("parachutesplus.cmd");
+        parent::__construct("parachuteplus", "Give parachute to players", "/parachute give <player name>", ["parachute", "pc"]);
+        $this->setPermission("parachuteplus.cmd");
+        $this->plugin = $plugin;
     }
 
     /**
@@ -23,16 +29,15 @@ class ParachutesCommands extends Command {
      * @param array $args
      * @return bool
      */
-
-    public function execute(CommandSender $sender, string $commandLabel, array $args)
+    public function execute(CommandSender $sender, string $commandLabel, array $args): bool
     {
-        if (!$sender->hasPermission("parachutes.cmd")) {
+        if (!$this->testPermission($sender)) {
             $sender->sendMessage(TextFormat::RED . "You don't have permission to use this command.");
             return false;
         }
 
-        if (count($args) <= 1) {
-            $sender->sendMessage(TextFormat::GRAY . "Usage: ". TextFormat::RED . $this->getUsage());
+        if (count($args) < 2) {
+            $sender->sendMessage(TextFormat::GRAY . "Usage: " . TextFormat::RED . $this->getUsage());
             return false;
         }
 
@@ -45,7 +50,7 @@ class ParachutesCommands extends Command {
         }
 
         $player->getInventory()->addItem(new Parachute());
-        $sender->sendMessage(TextFormat::GREEN . "Gave Parachute(s) to {$player->getName()}");
+        $sender->sendMessage(TextFormat::GREEN . "Gave Parachute(s) to " . $player->getName());
         return true;
     }
 }

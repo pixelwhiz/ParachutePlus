@@ -1,11 +1,11 @@
 <?php
 
-namespace pixelwhiz\parachute\listeners;
+namespace pixelwhiz\parachuteplus\listeners;
 
-use pixelwhiz\parachute\entity\Chicken;
-use pixelwhiz\parachute\items\AutoParachute;
-use pixelwhiz\parachute\items\Parachute;
-use pixelwhiz\parachute\Parachutes;
+use pixelwhiz\parachuteplus\entity\Chicken;
+use pixelwhiz\parachuteplus\items\AutoParachute;
+use pixelwhiz\parachuteplus\items\Parachute;
+use pixelwhiz\parachuteplus\Parachutes;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\Listener;
@@ -77,6 +77,7 @@ class EventListener implements Listener {
     public function onReceive(DataPacketReceiveEvent $event) {
         $packet = $event->getPacket();
         $player = $event->getOrigin()->getPlayer();
+
         if ($packet instanceof InteractPacket) {
             if ($packet->action === InteractPacket::ACTION_LEAVE_VEHICLE && Parachutes::isParachuteMode($player)) {
                 Parachutes::despawnParachute($player);
