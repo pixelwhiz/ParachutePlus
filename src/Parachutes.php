@@ -1,12 +1,12 @@
 <?php
 
 
-namespace pixelwhiz\parachute;
+namespace pixelwhiz\parachuteplus;
 
-use pixelwhiz\parachute\entity\Chicken;
-use pixelwhiz\parachute\items\AutoParachute;
-use pixelwhiz\parachute\items\Parachute;
-use pixelwhiz\parachute\utils\RandomUtils;
+use pixelwhiz\parachuteplus\entity\Chicken;
+use pixelwhiz\parachuteplus\items\AutoParachute;
+use pixelwhiz\parachuteplus\items\Parachute;
+use pixelwhiz\parachuteplus\utils\RandomUtils;
 use pocketmine\math\Vector3;
 use pocketmine\network\mcpe\NetworkBroadcastUtils;
 use pocketmine\network\mcpe\protocol\SetActorLinkPacket;

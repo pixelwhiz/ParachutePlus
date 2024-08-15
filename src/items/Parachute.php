@@ -1,7 +1,7 @@
 <?php
 
 
-namespace pixelwhiz\parachute\items;
+namespace pixelwhiz\parachuteplus\items;
 
 
 use pocketmine\item\Egg;

@@ -2,54 +2,54 @@
 
 declare(strict_types=1);
 
-namespace pixelwhiz\parachute;
+namespace pixelwhiz\parachuteplus;
 
-use pixelwhiz\parachute\commands\ParachutesCommands;
-use pixelwhiz\parachute\entity\Chicken;
+use pixelwhiz\parachuteplus\commands\ParachutePlusCommands;
+use pixelwhiz\parachuteplus\entity\Chicken;
 use pocketmine\entity\EntityDataHelper;
 use pocketmine\entity\EntityFactory;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
 
-use pixelwhiz\parachute\listeners\EventListener;
+use pixelwhiz\parachuteplus\listeners\EventListener;
 use pocketmine\world\World;
 
 class Main extends PluginBase {
 
     public static Main $instance;
 
+    /**
+     * @return Main
+     */
+    public static function getInstance(): self {
+        return self::$instance;
+    }
+
     protected function onLoad(): void
     {
-        self::getLogger()->notice("Optimizing chicken entity ...");
+        self::$instance = $this;
+        $this->getLogger()->notice("Optimizing chicken entity ...");
+        Parachutes::clearEntity();
     }
 
     protected function onEnable(): void
     {
-        Server::getInstance()->getPluginManager()->registerEvents(new EventListener(), $this);
+        Server::getInstance()->getPluginManager()->registerEvents(new EventListener($this), $this);
         EntityFactory::getInstance()->register(Chicken::class, function (World $world, CompoundTag $nbt): Chicken {
             return new Chicken(EntityDataHelper::parseLocation($nbt, $world), $nbt);
         }, ["Chicken"]);
+
         self::$instance = $this;
-        Parachutes::clearEntity();
-        Server::getInstance()->getCommandMap()->register("parachute", new ParachutesCommands());
+        Server::getInstance()->getCommandMap()->register("parachute", new ParachutePlusCommands($this));
     }
 
-    /**
-     * @return Main
-     */
-
-    public static function getInstance(): Main {
-        return self::$instance;
-    }
-    
     protected function onDisable(): void
     {
-        foreach (Server::getInstance()->getOnlinePlayers() as $players) {
-            if (Parachutes::isParachuteMode($players)) {
-                Parachutes::despawnParachute($players);
+        foreach (Server::getInstance()->getOnlinePlayers() as $player) {
+            if (Parachutes::isParachuteMode($player)) {
+                Parachutes::despawnParachute($player);
             }
         }
     }
-
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace pixelwhiz\parachute\entity;
+namespace pixelwhiz\parachuteplus\entity;
 
 
 use pocketmine\math\Vector3;
-use pixelwhiz\parachute\Parachutes;
+use pixelwhiz\parachuteplus\Parachutes;
 use pocketmine\block\Air;
 use pocketmine\entity\EntitySizeInfo;
 use pocketmine\entity\Living;

@@ -1,6 +1,6 @@
 <?php
 
-namespace pixelwhiz\parachute\utils;
+namespace pixelwhiz\parachuteplus\utils;
 
 
 use pocketmine\math\Vector3;
