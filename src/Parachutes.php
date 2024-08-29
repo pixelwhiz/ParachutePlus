@@ -77,7 +77,6 @@ class Parachutes {
                 }
             }
         }
-        Main::getInstance()->getLogger()->notice("All chicken entities on server optimized successfully! Have a nice Play :)");
     }
 
     /**

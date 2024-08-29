@@ -15,6 +15,7 @@ use pocketmine\plugin\PluginOwnedTrait;
 class ParachutePlusCommands extends Command implements PluginOwned {
 
     use PluginOwnedTrait;
+    public Plugin $plugin;
 
     public function __construct(Plugin $plugin)
     {
