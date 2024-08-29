@@ -29,7 +29,6 @@ class Main extends PluginBase {
     protected function onLoad(): void
     {
         self::$instance = $this;
-        $this->getLogger()->notice("Optimizing chicken entity ...");
         Parachutes::clearEntity();
     }
 
