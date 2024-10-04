@@ -6,7 +6,7 @@
 
 | Command                               | Description                                                       | Permission                |
 |---------------------------------------|-------------------------------------------------------------------|---------------------------|
-| **/parachuteplus give <player name>** | Give parachute to player                                                            | `parachuteplus.cmd`        |
+| **/parachuteplus give [player name]** | Give parachute to player                                                            | `parachuteplus.cmd`        |
 
 ### Steps to Use:
 1. **Give Parachute**: Use the `/parachuteplus give <player name>` command to give a parachute to a player.
