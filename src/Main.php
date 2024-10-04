@@ -20,6 +20,8 @@ class Main extends PluginBase {
     public static Main $instance;
 
     /**
+     * @description: ParachutePlus main instance
+     *
      * @return Main
      */
     public static function getInstance(): self {
@@ -40,7 +42,7 @@ class Main extends PluginBase {
         }, ["Chicken"]);
 
         self::$instance = $this;
-        Server::getInstance()->getCommandMap()->register("parachute", new ParachutePlusCommands($this));
+        Server::getInstance()->getCommandMap()->register("parachuteplus", new ParachutePlusCommands($this));
     }
 
     protected function onDisable(): void

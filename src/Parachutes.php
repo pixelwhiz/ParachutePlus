@@ -20,6 +20,8 @@ use pocketmine\Server;
 class Parachutes {
 
     /**
+     * @description: Add parachute to player
+     *
      * @param Player $player
      * @return bool
      */
@@ -48,6 +50,8 @@ class Parachutes {
     }
 
     /**
+     * @description: Despawn or Remove parachute from player
+     *
      * @param Player $player
      * @return void
      */
@@ -66,6 +70,8 @@ class Parachutes {
     }
 
     /**
+     * @description: Clear all entities from all worlds
+     *
      * @return void
      */
 
@@ -80,6 +86,8 @@ class Parachutes {
     }
 
     /**
+     * @description: Check player is on parachute or not
+     *
      * @param Player $player
      * @return bool
      */
