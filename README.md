@@ -9,7 +9,7 @@
 | **/parachuteplus give <player name>** | Give parachute to player                                                            | `parachuteplus.cmd`        |
 
 ### Steps to Use:
-1. **Give Parachute**: Use the `/parachute give <player name>` command to give a parachute to a player.
+1. **Give Parachute**: Use the `/parachuteplus give <player name>` command to give a parachute to a player.
 2. **Deploy Parachute**: Right-click with the parachute item in hand to deploy it. The player will be mounted on a custom chicken entity, which will glide the player safely downwards.
 3. **Auto Parachute**: Once deployed, the parachute item transforms into an `AutoParachute`, which automatically activates upon falling and is removed when the player lands.
 
