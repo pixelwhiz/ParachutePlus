@@ -19,7 +19,7 @@ class ParachutePlusCommands extends Command implements PluginOwned {
 
     public function __construct(Plugin $plugin)
     {
-        parent::__construct("parachuteplus", "Give parachute to players", "/parachute give <player name>", ["parachute", "pc"]);
+        parent::__construct("parachuteplus", "Give parachute to player", "/parachute give <player name>", ["parachute", "pc"]);
         $this->setPermission("parachuteplus.cmd");
         $this->plugin = $plugin;
     }
