@@ -17,7 +17,7 @@
 
 # Issues
 
-If you encounter any issues, please report them [here](https://github.com/pixelwhiz/ParachutePlus/issues/new).
+If you have any issues, please report them [here](https://github.com/pixelwhiz/ParachutePlus/issues/new).
 
 # Preview
 
